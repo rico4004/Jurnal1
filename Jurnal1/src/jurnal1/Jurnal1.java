@@ -22,17 +22,16 @@ public class Jurnal1 {
 		int n = s.nextInt();
                 System.out.println();
                 System.out.println("Output : ");
-		for(int i=1;i<=n;i++)
-                    System.out.print(fibo(i) + " ");
-		System.out.println();
-	}
-
-	private static int fibo(int n){
-		int f;
-		if(n==1 || n==2)
-			f=1;
-		else
-			f = fibo(n-1) + fibo(n-2);
-		return f;
+		long fib[] = new long[n];
+                fib[0]=1;
+                fib[1]=1;                
+                for (int i=2; i<n; i++){
+                    fib[i] = fib[i-1] + fib[i-2];
+                }
+                
+                for(int i=n-1;i>=0;i--){
+                    System.out.print(fib[i] + " ");
+                    System.out.print("");
+                }
 	}
 }
