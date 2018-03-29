@@ -20,11 +20,13 @@ public class Jurnal1 {
          Scanner s = new Scanner(System.in);
 		System.out.print("Inputan : ");
 		int n = s.nextInt();
+	    	int sum = 0;
                 System.out.println();
                 System.out.println("Output : ");
-		for(int i=1;i<=n;i++)
-                    System.out.print(fibo(i) + " ");
-		System.out.println();
+		for(int i=1;i<=n;i++){
+                    sum = sum + fibo(i);
+		}
+		System.out.println(sum);
 	}
 
 	private static int fibo(int n){
